@@ -1,0 +1,324 @@
+
+/* =========================
+   GLOBAL RESET
+========================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff007f;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(to right, #ff4da6, #ff80bf);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 10px 0 20px;
+}
+
+/* BUTTON GLOBAL */
+.btn {
+    padding: 12px 25px;
+    background: white;
+    color: #ff007f;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =========================
+   SECTION SYSTEM
+========================= */
+.section {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+/* =========================
+   KATEGORI
+========================= */
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 220px;
+    padding: 20px;
+    border-radius: 15px;
+    background: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* =========================
+   FEATURES
+========================= */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    width: 200px;
+}
+
+/* =========================
+   CTA
+========================= */
+.cta {
+    background: #ff007f;
+    color: white;
+    padding: 50px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #222;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* =========================
+   TRUST BAR (NEW FIX)
+========================= */
+.trust-bar {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ff007f;
+    background: #fff;
+}
+
+/* =========================
+   SLIDER BASE (SINGLE SYSTEM)
+========================= */
+.slider {
+    position: relative;
+    max-width: 850px;
+    margin: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.slides {
+    position: relative;
+    height: 360px;
+}
+
+/* =========================
+   SLIDE CARD (FINAL ONLY VERSION)
+========================= */
+.slides .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+
+    transition: all 0.7s ease;
+
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* ACTIVE SLIDE */
+.slides .card.active {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* IMAGE */
+.slides img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   NAV BUTTON
+========================= */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(255,255,255,0.6);
+    border: none;
+    color: #ff007f;
+
+    font-size: 18px;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* =========================
+   DOTS
+========================= */
+.dots {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    margin: 4px;
+    display: inline-block;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    width: 18px;
+    border-radius: 10px;
+    background: #ff007f;
+}
+
+/* =========================
+   CINEMATIC HERO
+========================= */
+.cinematic-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+
+    background: linear-gradient(120deg, #ff4da6, #ff80bf);
+}
+
+/* glow */
+.hero-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.25), transparent 70%);
+    top: -200px;
+    left: -200px;
+    filter: blur(50px);
+    z-index: 1;
+}
+
+/* content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* typography */
+.title {
+    font-size: 54px;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-size: 20px;
+    opacity: 0.95;
+}
+
+.subtext {
+    opacity: 0.9;
+    font-size: 16px;
+}
+
+.trust {
+    margin-top: 15px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* HERO BUTTON */
+.cinematic-hero .btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 16px 34px;
+
+    border-radius: 50px;
+    background: linear-gradient(135deg, #ff4da6, #ff80bf);
+    color: white;
+
+    font-weight: bold;
+    text-decoration: none;
+
+    box-shadow: 0 20px 50px rgba(255,0,127,0.35);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 1s forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+.delay-4 { animation-delay: 1.2s; }
